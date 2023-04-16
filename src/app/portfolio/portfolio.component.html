@@ -12,7 +12,6 @@
                 <th> Current Price USD</th>
                 <th> Total Price USD</th>
                 <th> Current ratio</th>
-                <th> Target Ratio</th>
                 <th></th>
             </tr>
         </thead>
@@ -26,10 +25,10 @@
 
                     </datalist>
                 </td>
-                <td><input type="number" [(ngModel)]="assetList[i].number"></td>
+                <td><input type="number" [(ngModel)]="assetList[i].number" (change)="updateTable($event,i)"></td>
                 <td><input type="text" [(ngModel)]="assetList[i].currentPrice" readonly></td>
                 <td><input type="text" [(ngModel)]="assetList[i].totalPrice" readonly></td>
-                <td><input type="text" readonly></td>
+                <td><input type="text" [(ngModel)]="assetList[i].ratio" readonly></td>
                 <td> <button (click)="deleteRow(i)"><i class="fa fa-trash button-rem"></i></button></td>
             </tr>
         </tbody>

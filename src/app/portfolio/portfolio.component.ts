@@ -31,6 +31,19 @@ export class PortfolioComponent implements OnInit {
     this.assetList[pos].currentPrice = pos + 1 * 100;
     this.updateTotal(pos);
     this.calculateTotalQuantity();
+    this.updateAllRatios();
+  }
+
+  public updateTable(e: any, pos: number): void {
+    this.updateTotal(pos);
+    this.calculateTotalQuantity();
+    this.updateAllRatios();
+  }
+
+  updateAllRatios() {
+    this.assetList.forEach((lot: any) => {
+      lot.ratio = Math.round((lot.totalPrice  / this.totalValue)*100*10)/10;
+    });
   }
 
   public updateTotal(pos: number) {
@@ -67,9 +80,11 @@ export class PortfolioComponent implements OnInit {
     var delBtn = confirm(" Do you want to remove the asset ?");
     if (delBtn == true) {
       this.row.splice(x, 1);
-      this.assetList.slice(x, 1);
+      this.assetList = this.assetList.filter((_, index) => index !== x);
+      //this.assetList.slice(x, 1);
       this.numberAssets -=  1;
       this.calculateTotalQuantity();
+      this.updateAllRatios();
     }
 
   }

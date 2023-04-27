@@ -4,6 +4,10 @@ export class Asset {
     number: number;
     totalPrice: number;
     ratio: number;
+    targetRatio: number;
+    calculatedTargetNumber: number;
+    calculatedTargetDelta: number;
+    calculatedTotalPrice: number;
 
     constructor() {
         this.name = "";
@@ -11,6 +15,10 @@ export class Asset {
         this.number = 1;
         this.totalPrice = 0;
         this.ratio = 0;
+        this.targetRatio = 0;
+        this.calculatedTargetNumber = 0;
+        this.calculatedTargetDelta = 0;
+        this.calculatedTotalPrice = 0;
     }
 
 

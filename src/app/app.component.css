@@ -94,7 +94,7 @@
     background-color: #fafafa;
     height: 40px;
     width: 200px;
-    margin: 0 8px 16px;
+    margin: 40px 8px 16px;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -103,6 +103,8 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
+
+  
 
   .card-container .card:not(:last-child) {
     margin-right: 0;
@@ -220,7 +222,7 @@
   }
 
   footer {
-    margin-top: 8px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     line-height: 20px;

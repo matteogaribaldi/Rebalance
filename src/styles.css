@@ -103,6 +103,38 @@
     line-height: 24px;
   }
 
+  .card-big {
+    border-radius: 6px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #6ea96e;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    margin: 20px 8px 60px;
+  }
+
+  .card-big-warning {
+    border-radius: 6px;
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #fed636;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    color: rgb(220, 97, 63);
+    margin: 20px 8px 25px;
+  }
+
   .card-container .card:not(:last-child) {
     margin-right: 0;
   }
@@ -219,7 +251,7 @@
   }
 
   footer {
-    margin-top: 8px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     line-height: 20px;

@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-
     <table class="style">
         <thead>
             <tr>
@@ -26,22 +25,23 @@
                     </datalist>
                 </td>
                 <td><input type="number" [(ngModel)]="assetList[i].number" (change)="updateTable($event,i)"></td>
-                <td><input type="text" [(ngModel)]="assetList[i].currentPrice" readonly></td>
-                <td><input type="text" [(ngModel)]="assetList[i].totalPrice" readonly></td>
-                <td><input type="text" [(ngModel)]="assetList[i].ratio" readonly></td>
+                <td><input type="text" [ngModel]="assetList[i].currentPrice | number:'1.0-2'" readonly></td>
+                <td><input type="text" [ngModel]="assetList[i].totalPrice | number:'1.0-2'" readonly></td>
+                <td><input type="text" [ngModel]="assetList[i].ratio | number:'1.0-2'" readonly></td>
                 <td> <button (click)="deleteRow(i)"><i class="fa fa-trash button-rem"></i></button></td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
                 <td class="right" colspan="4">Total:</td>
-                <td class="right">{{totalValue}}</td>
+                <td class="right">{{totalValue | number:'1.0-2'}}</td>
                 <td class="right">100</td>
                 <td class="right">90</td>
             </tr>
         </tfoot>
 
     </table>
+
     <div class="card-container">
         <button class="card card-small" (click)="addTable()">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -49,7 +49,10 @@
             </svg>
             <span>Add Asset</span>
         </button>
-    </div>
+    </div>    
+
+
+    <app-target-portfolio [assetList]="assetList"></app-target-portfolio>
 </body>
 
 </html>

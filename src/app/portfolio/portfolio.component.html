@@ -2,57 +2,62 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-    <table class="style">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Asset name</th>
-                <th>Number</th>
-                <th> Current Price USD</th>
-                <th> Total Price USD</th>
-                <th> Current ratio</th>
-                <th></th>
-            </tr>
-        </thead>
+    <div  class="content" role="main">
+        <table class="style">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Asset name</th>
+                    <th>Number</th>
+                    <th> Current Price USD</th>
+                    <th> Total Price USD</th>
+                    <th> Current ratio</th>
+                    <th></th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr *ngFor="let item of row; let i = index">
-                <td>{{i+1}}</td>
-                <td> <input list="assets" name="asset" style="width: 300px;" (change)="onInput($event,i)">
-                    <datalist id="assets">
-                        <option *ngFor="let opt of options" [value]="opt.Name">{{opt.Name}}</option>
+            <tbody>
+                <tr *ngFor="let item of row; let i = index">
+                    <td>{{i+1}}</td>
+                    <td> <input list="assets" name="asset" style="width: 300px;" (change)="onInput($event,i)">
+                        <datalist id="assets">
+                            <option *ngFor="let opt of options" [value]="opt.Name">{{opt.Name}}</option>
 
-                    </datalist>
-                </td>
-                <td><input type="number" [(ngModel)]="assetList[i].number" (change)="updateTable($event,i)"></td>
-                <td><input type="text" [ngModel]="assetList[i].currentPrice | number:'1.0-2'" readonly></td>
-                <td><input type="text" [ngModel]="assetList[i].totalPrice | number:'1.0-2'" readonly></td>
-                <td><input type="text" [ngModel]="assetList[i].ratio | number:'1.0-2'" readonly></td>
-                <td> <button (click)="deleteRow(i)"><i class="fa fa-trash button-rem"></i></button></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td class="right" colspan="4">Total:</td>
-                <td class="right">{{totalValue | number:'1.0-2'}}</td>
-                <td class="right">100</td>
-                <td class="right">90</td>
-            </tr>
-        </tfoot>
+                        </datalist>
+                    </td>
+                    <td><input type="number" [(ngModel)]="assetList[i].number" (change)="updateTable($event,i)"></td>
+                    <td><input type="text" [ngModel]="assetList[i].currentPrice | number:'1.0-2'" readonly></td>
+                    <td><input type="text" [ngModel]="assetList[i].totalPrice | number:'1.0-2'" readonly></td>
+                    <td><input type="text" [ngModel]="assetList[i].ratio | number:'1.0-2'" readonly></td>
+                    <td> <button (click)="deleteRow(i)"><i class="fa fa-trash button-rem"></i></button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="right" colspan="4">Total:</td>
+                    <td class="right">{{totalValue | number:'1.0-2'}}</td>
+                    <td class="right">100</td>
+                    <td class="right">90</td>
+                </tr>
+            </tfoot>
 
-    </table>
+        </table>
 
-    <div class="card-container">
-        <button class="card card-small" (click)="addTable()">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-            </svg>
-            <span>Add Asset</span>
-        </button>
-    </div>    
+        <div class="card-container">
+            <button class="card card-small" (click)="addTable()">
+                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+                <span>Add Asset</span>
+            </button>
+        </div>
 
-
-    <app-target-portfolio [assetList]="assetList"></app-target-portfolio>
+   
+    </div>
 </body>
 
 </html>
+<div class="blu">
+    <app-target-portfolio [assetList]="assetList"></app-target-portfolio>
+</div>

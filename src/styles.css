@@ -1,3 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
 
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -59,7 +63,7 @@
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
+    margin: 20px auto 20px;
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
@@ -104,28 +108,21 @@
   }
 
   .card-big {
-    border-radius: 6px;
-    height: 50px;
     padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
-    background-color: #6ea96e;
+    background-color: #D5F4FF;
     width: 100%;
     transition: all 0.2s ease-in-out;
-    color: white;
+    color: black;
     margin: 20px 8px 60px;
+    justify-content:space-evenly;
   }
 
   .card-big-warning {
-    border-radius: 6px;
-    height: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
     display: flex;
     align-items: center;
     background-color: #fed636;
@@ -323,3 +320,101 @@
       visibility: hidden;
     }
   }
+  .blu {
+    background-color: rgb(212, 241, 250);
+  }
+
+  .style {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* font-family : inherit; */
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .style td,
+  .style th {
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  
+  .style tr {
+    background-color: #f2f2f2;
+  }
+  
+  .style tr:hover {
+    background-color: #ddd;
+  }
+  
+  .style th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: #3B4856;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    padding: 6px 8px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .button-rem {
+    width: 50%;
+    padding: 8px 12px;
+    margin: 0 25% 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .style-t {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* font-family : inherit; */
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    min-width: 600px;
+    border-radius: 6px;
+  }
+  
+  .style-t td,
+  .style-t th {
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  
+
+  
+  .style-t tr:hover {
+    background-color: #b8c6db;
+  }
+  
+  .style-t th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: #3B4856;
+    color: rgb(255, 255, 255);
+  }
+
+
+      .custom-slider .ngx-slider .ngx-slider-pointer {
+          width: 4px;
+          height: 8px;
+          top: auto;
+          /* to remove the default positioning */
+          bottom: 0;
+          background-color: #333;
+          border-top-left-radius: 1px;
+          border-top-right-radius: 1px;
+      }
+  

@@ -1,31 +1,43 @@
-<div class="toolbar" role="banner">
-  <img width="40" alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-  <span>Portfolio Rebalancing</span>
-  <div class="spacer"></div>
-</div>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+  <img src="assets/COLORS.png" alt="Optimized Portfolios" style="height:70px;padding-right: 20px;">
+    <ul class='nav'>
+    <li><a class='nav-link' routerLinkActive='active' routerLink='/about'>About</a></li>
+  </ul>
+</nav>
+<section class="u-align-left u-clearfix u-image u-section-1" src="" id="sec-f2a4" data-image-width="1920" data-image-height="800">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="u-align-left u-container-style u-group u-shape-rectangle u-group-1">
+      <div class="u-container-layout u-container-layout-1">
+        <h2 class="u-text u-text-default u-title u-text-1">REBALANCE YOUR PORTFOLIO
+        </h2>
+        <p class="u-large-text u-text u-text-variant u-text-2"> The aim of optimizETF is to build a long-term portfolio of Exchanged Traded Funds (ETF) (e.g. investment funds that track indexes of bonds and/or stocks) optimized according to the modern portfolio theory.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="content" role="main">
-
-  <!-- Select portfolio -->
-  <h2>Your portfolio</h2>
-  <p>Fill in your current portfolio:</p>
+  <div class="content" role="main">
+    <!-- Select portfolio -->
+    <h1>Your portfolio</h1>
+    <h3>Select the assets of your portfolio:</h3>
+  </div>
   <app-portfolio></app-portfolio>
-  
- 
+
+
 
   <!-- Footer -->
-  <footer>
-    Love Angular?&nbsp;
-    <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
-
-    </a>
-
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b0b9">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">All rights are reserved</p>
+      Like this project?&nbsp;
+      <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.</a>
+    </div>
   </footer>
 
 
 
-</div>
+
+
 
 
 <router-outlet></router-outlet>

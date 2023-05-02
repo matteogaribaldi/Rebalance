@@ -474,7 +474,6 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
   font: inherit;
   margin: 0;
 }
@@ -27635,6 +27634,24 @@ section.u-grey-5:before,
   color: #ffffff;
   background-color: #4c7397;
 }
+.u-blu .blfont  {
+  color: black;
+  
+}
+.u-azzurro  {
+  color: black;
+  background-color: #D5F4FF;
+}
+
+
+.u-yellow  {
+  color: #ffffff;
+  background-color: #E39E22;
+}
+
+
+
+
 .u-button-style.u-grey-5,
 .u-button-style.u-grey-5[class*="u-border-"] {
   color: #111111 !important;

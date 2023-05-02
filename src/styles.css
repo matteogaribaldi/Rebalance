@@ -335,7 +335,8 @@
   .style td,
   .style th {
     border: 1px solid #ddd;
-    padding: 3px;
+    padding: 3px 5px;
+    text-align: right;
   }
   
   .style tr {
@@ -362,6 +363,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+
   }
   
   .button-rem {
@@ -405,16 +407,23 @@
     background-color: #3B4856;
     color: rgb(255, 255, 255);
   }
+.custom-slider .ngx-slider .ngx-slider-pointer {
+  width: 4px;
+  height: 8px;
+  top: auto;
+  /* to remove the default positioning */
+  bottom: 0;
+  background-color: #333;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
 
+.warning{
+  color: #FFBF00;
+  text-shadow: 2px 2px chocolate;
+}
+.input-reb{
 
-      .custom-slider .ngx-slider .ngx-slider-pointer {
-          width: 4px;
-          height: 8px;
-          top: auto;
-          /* to remove the default positioning */
-          bottom: 0;
-          background-color: #333;
-          border-top-left-radius: 1px;
-          border-top-right-radius: 1px;
-      }
-  
+  max-width: 100px;
+
+}

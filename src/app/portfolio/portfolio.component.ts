@@ -68,7 +68,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   public updateTotal(pos: number) {
-    this.assetList[pos].totalPrice = this.assetList[pos].number * this.assetList[pos].currentPrice;
+    this.assetList[pos].totalPrice = this.assetList[pos].currentQuantity * this.assetList[pos].currentPrice;
   }
 
   calculateTotalQuantity() {

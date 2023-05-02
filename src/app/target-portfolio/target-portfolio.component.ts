@@ -56,4 +56,9 @@ export class TargetPortfolioComponent implements OnInit {
     )
     }
 
+    Rebalance2() {
+      
+     // rebalancePortfolio(this.addedCash,this.assetList);
+      }
+
 }

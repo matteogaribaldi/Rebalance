@@ -1,7 +1,7 @@
 export class Asset {
     name: string | undefined;
     currentPrice: number;
-    number: number;
+    currentQuantity: number;
     totalPrice: number;
     ratio: number;
     targetRatio: number;
@@ -12,7 +12,7 @@ export class Asset {
     constructor() {
         this.name = "";
         this.currentPrice = 0;
-        this.number = 1;
+        this.currentQuantity = 1;
         this.totalPrice = 0;
         this.ratio = 0;
         this.targetRatio = 0;

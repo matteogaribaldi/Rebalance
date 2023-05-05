@@ -13,13 +13,15 @@ export class TargetPortfolioService {
 
   constructor(private http: HttpClient) { }
 
-  getMinRebalance() {
+  getMinRebalance(portfolio: Asset[]) {
 
-    return this.http.get<number>('http://localhost:5054/api/getMinRebalance')
+    /*return this.http.get<number>('http://localhost:5054/api/getMinRebalance')
       .pipe(
         retry(3), // retry a failed request up to 3 times
         catchError(this.handleError) // then handle the error
-      );
+      );*/
+
+   
   }
 
     getRebalancedPortfolio(cash: number, portfolio: Asset[]) {

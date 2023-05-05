@@ -14,7 +14,7 @@
                 <tbody>
                     <tr *ngFor="let asset of assetList;let i = index">
                         <td>{{asset.name}}</td>
-                        <td><input type="number" [(ngModel)]="assetList[i].targetRatio"></td>
+                        <td><input type="number" [(ngModel)]="assetList[i].targetRatio" (change)="updateMinRebalance()"></td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -28,7 +28,7 @@
 
 
         <div class="warning">
-            <h3><u>You can rebalance portfolio adding <b>{{minRebalance}} USD</b> without selling assets</u></h3>
+            <h3><u>You can rebalance portfolio adding <b>{{minRebalance | number:'1.0-2'}} USD</b> without selling assets</u></h3>
         </div>
 
 
@@ -73,7 +73,7 @@
 
 
         <div class="card-container">
-            <button class="card card-small" (click)="Rebalance()">
+            <button class="card card-small" >
                 <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24">
                     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
@@ -102,7 +102,7 @@
                     <td>{{asset.name}}</td>
                     <td><input type="text" [ngModel]="asset.calculatedTargetNumber | number:'1.0-2'"></td>
                     <td><input type="text" [ngModel]="asset.calculatedTargetDelta | number:'1.0-2'"></td>
-                    <td class="blfont"><input type="text" [ngModel]="asset.calculatedTotalPrice | number:'1.0-2'"></td>
+                    <td class="blfont"><input type="text" [ngModel]="asset.calculatedTotalValue | number:'1.0-2'"></td>
                 </tr>
             </tbody>
         </table>

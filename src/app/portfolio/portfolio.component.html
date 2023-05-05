@@ -27,7 +27,7 @@
                     </td>
                     <td><input type="number" [(ngModel)]="assetList[i].currentQuantity" (change)="updateTable($event,i)"></td>
                     <td>{{assetList[i].currentPrice | number:'1.0-2'}}</td>
-                    <td>{{assetList[i].totalPrice | number:'1.0-2'}}</td>
+                    <td>{{assetList[i].totalValue | number:'1.0-2'}}</td>
                     <td>{{assetList[i].ratio | number:'1.0-2'}} %</td>
                     <td> <button (click)="deleteRow(i)"><i class="fa fa-trash button-rem"></i></button></td>
                 </tr>

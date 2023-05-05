@@ -62,19 +62,19 @@ export class PortfolioComponent implements OnInit {
 
   updateAllRatios() {
     this.assetList.forEach((lot: any) => {
-      lot.ratio = Math.round((lot.totalPrice / this.totalValue) * 100 * 10) / 10;
+      lot.ratio = Math.round((lot.totalValue / this.totalValue) * 100 * 10) / 10;
       lot.targetRatio = lot.ratio;
     });
   }
 
   public updateTotal(pos: number) {
-    this.assetList[pos].totalPrice = this.assetList[pos].currentQuantity * this.assetList[pos].currentPrice;
+    this.assetList[pos].totalValue = this.assetList[pos].currentQuantity * this.assetList[pos].currentPrice;
   }
 
   calculateTotalQuantity() {
     this.totalValue = 0;
     this.assetList.forEach((lot: any) => {
-      this.totalValue += lot.totalPrice;
+      this.totalValue += lot.totalValue;
     });
   }
 
